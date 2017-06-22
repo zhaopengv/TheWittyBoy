@@ -1,0 +1,90 @@
+
+Runner.png
+size: 512,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+arm_down_left
+  rotate: true
+  xy: 248, 33
+  size: 29, 42
+  orig: 29, 42
+  offset: 0, 0
+  index: -1
+arm_down_right
+  rotate: false
+  xy: 292, 31
+  size: 41, 31
+  orig: 41, 31
+  offset: 0, 0
+  index: -1
+arm_up_left
+  rotate: true
+  xy: 248, 2
+  size: 29, 40
+  orig: 29, 40
+  offset: 0, 0
+  index: -1
+arm_up_right
+  rotate: true
+  xy: 290, 2
+  size: 27, 34
+  orig: 27, 34
+  offset: 0, 0
+  index: -1
+foot_left
+  rotate: false
+  xy: 80, 2
+  size: 17, 19
+  orig: 17, 19
+  offset: 0, 0
+  index: -1
+foot_right
+  rotate: false
+  xy: 371, 47
+  size: 21, 15
+  orig: 21, 15
+  offset: 0, 0
+  index: -1
+head
+  rotate: true
+  xy: 335, 36
+  size: 26, 34
+  orig: 26, 34
+  offset: 0, 0
+  index: -1
+leg_left
+  rotate: true
+  xy: 80, 43
+  size: 19, 66
+  orig: 19, 66
+  offset: 0, 0
+  index: -1
+leg_right
+  rotate: true
+  xy: 80, 23
+  size: 18, 66
+  orig: 18, 66
+  offset: 0, 0
+  index: -1
+thigh_left
+  rotate: true
+  xy: 148, 24
+  size: 38, 47
+  orig: 38, 47
+  offset: 0, 0
+  index: -1
+thigh_right
+  rotate: false
+  xy: 197, 32
+  size: 49, 30
+  orig: 49, 30
+  offset: 0, 0
+  index: -1
+trunk
+  rotate: true
+  xy: 2, 9
+  size: 53, 76
+  orig: 53, 76
+  offset: 0, 0
+  index: -1

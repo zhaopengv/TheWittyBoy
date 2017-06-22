@@ -1,0 +1,83 @@
+
+hero_welcom.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+eye
+  rotate: false
+  xy: 425, 455
+  size: 38, 34
+  orig: 38, 34
+  offset: 0, 0
+  index: -1
+eye_love
+  rotate: false
+  xy: 369, 329
+  size: 37, 35
+  orig: 37, 35
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 216, 50
+  size: 93, 94
+  orig: 93, 94
+  offset: 0, 0
+  index: -1
+left_arm
+  rotate: false
+  xy: 347, 366
+  size: 76, 123
+  orig: 76, 123
+  offset: 0, 0
+  index: -1
+leg_left
+  rotate: false
+  xy: 347, 310
+  size: 20, 54
+  orig: 20, 54
+  offset: 0, 0
+  index: -1
+leg_right
+  rotate: false
+  xy: 347, 310
+  size: 20, 54
+  orig: 20, 54
+  offset: 0, 0
+  index: -1
+thigh_left
+  rotate: false
+  xy: 347, 310
+  size: 20, 54
+  orig: 20, 54
+  offset: 0, 0
+  index: -1
+thigh_right
+  rotate: false
+  xy: 347, 310
+  size: 20, 54
+  orig: 20, 54
+  offset: 0, 0
+  index: -1
+moon
+  rotate: false
+  xy: 2, 146
+  size: 343, 343
+  orig: 343, 343
+  offset: 0, 0
+  index: -1
+right_arm
+  rotate: false
+  xy: 136, 23
+  size: 78, 121
+  orig: 78, 121
+  offset: 0, 0
+  index: -1
+trunk
+  rotate: false
+  xy: 2, 2
+  size: 132, 142
+  orig: 132, 142
+  offset: 0, 0
+  index: -1
