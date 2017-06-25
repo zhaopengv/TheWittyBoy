@@ -42,7 +42,6 @@ namespace Spine.Unity.Examples {
 		[SpineSlot] public string handSlot;
 		public Vector2 newHandOffset;
 		public float newHandRotation;
-		public Texture2D handTexture;
 
 		[Header("From Sprite")]
 		public Sprite dagger;
@@ -76,10 +75,9 @@ namespace Spine.Unity.Examples {
 			// Case 1: Create an attachment from an atlas.
 			RegionAttachment newHand = handSource.GetAtlas().FindRegion(handRegion).ToRegionAttachment("new hand");
 			newHand.SetPositionOffset(newHandOffset);
-			newHand.rotation = newHandRotation;
+			newHand.Rotation = newHandRotation;
 			newHand.UpdateOffset();
 			int handSlotIndex = skeleton.FindSlotIndex(handSlot);
-			handTexture = newHand.GetRegion().ToTexture();
 			newSkin.AddAttachment(handSlotIndex, handAttachmentName, newHand);
 
 			// Case 2: Create an attachment from a Unity Sprite (Sprite texture needs to be Read/Write Enabled in the inspector.
@@ -105,7 +103,9 @@ namespace Spine.Unity.Examples {
 			
 			skeleton.SetSkin(newSkin);
 			skeleton.SetToSetupPose();
-			skeleton.SetAttachment(weaponSlot, daggerName);
+			//skeleton.SetAttachment(weaponSlot, daggerName);
+
+			Resources.UnloadUnusedAssets();
 		}
 
 	}

@@ -1,0 +1,90 @@
+
+skeleton.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+img/boy/body
+  rotate: false
+  xy: 229, 138
+  size: 177, 113
+  orig: 177, 113
+  offset: 0, 0
+  index: -1
+img/boy/ear
+  rotate: false
+  xy: 384, 39
+  size: 37, 54
+  orig: 37, 54
+  offset: 0, 0
+  index: -1
+img/boy/eye_left
+  rotate: true
+  xy: 177, 2
+  size: 40, 44
+  orig: 40, 44
+  offset: 0, 0
+  index: -1
+img/boy/eye_right
+  rotate: false
+  xy: 423, 49
+  size: 40, 44
+  orig: 40, 44
+  offset: 0, 0
+  index: -1
+img/boy/face
+  rotate: false
+  xy: 229, 3
+  size: 153, 133
+  orig: 153, 133
+  offset: 0, 0
+  index: -1
+img/boy/hair
+  rotate: false
+  xy: 2, 44
+  size: 225, 207
+  orig: 225, 207
+  offset: 0, 0
+  index: -1
+img/boy/headset
+  rotate: false
+  xy: 408, 95
+  size: 85, 156
+  orig: 85, 156
+  offset: 0, 0
+  index: -1
+img/boy/left_hand
+  rotate: true
+  xy: 2, 8
+  size: 34, 85
+  orig: 34, 85
+  offset: 0, 0
+  index: -1
+img/boy/left_leg
+  rotate: true
+  xy: 384, 12
+  size: 25, 56
+  orig: 25, 56
+  offset: 0, 0
+  index: -1
+img/boy/mouth
+  rotate: true
+  xy: 495, 220
+  size: 31, 13
+  orig: 31, 13
+  offset: 0, 0
+  index: -1
+img/boy/right_hand
+  rotate: true
+  xy: 89, 9
+  size: 33, 86
+  orig: 33, 86
+  offset: 0, 0
+  index: -1
+img/boy/right_leg
+  rotate: false
+  xy: 465, 37
+  size: 25, 56
+  orig: 25, 56
+  offset: 0, 0
+  index: -1

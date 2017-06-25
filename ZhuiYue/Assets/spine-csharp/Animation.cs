@@ -855,7 +855,7 @@ namespace Spine {
 		override public void Apply (Skeleton skeleton, float lastTime, float time, ExposedList<Event> firedEvents, float alpha, bool setupPose, bool mixingOut) {
 			IkConstraint constraint = skeleton.ikConstraints.Items[ikConstraintIndex];
 			float[] frames = this.frames;
-			if (time < frames[0]) {
+			if (time < frames[0]) { // Time is before first frame.
 				if (setupPose) {
 					constraint.mix = constraint.data.mix;
 					constraint.bendDirection = constraint.data.bendDirection;

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/ChaseTheMoon/Scenes/Gamelevel.unity
+- path: Assets/WittyBoy/Levels/Level1-1.unity
   isLoaded: 1
   isActive: 1

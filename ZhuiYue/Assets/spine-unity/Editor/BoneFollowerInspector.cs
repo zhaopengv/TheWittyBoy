@@ -31,9 +31,13 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace Spine.Unity.Editor {	
+namespace Spine.Unity.Editor {
+
+	using Editor = UnityEditor.Editor;
+	using Event = UnityEngine.Event;
+
 	[CustomEditor(typeof(BoneFollower)), CanEditMultipleObjects]
-	public class BoneFollowerInspector : UnityEditor.Editor {
+	public class BoneFollowerInspector : Editor {
 		SerializedProperty boneName, skeletonRenderer, followZPosition, followBoneRotation, followLocalScale, followSkeletonFlip;
 		BoneFollower targetBoneFollower;
 		bool needsReset;
@@ -74,6 +78,13 @@ namespace Spine.Unity.Editor {
 			targetBoneFollower = (BoneFollower)target;
 			if (targetBoneFollower.SkeletonRenderer != null)
 				targetBoneFollower.SkeletonRenderer.Initialize(false);
+
+			if (!targetBoneFollower.valid || needsReset) {
+				targetBoneFollower.Initialize();
+				targetBoneFollower.LateUpdate();
+				needsReset = false;
+				SceneView.RepaintAll();
+			}
 		}
 
 		public void OnSceneGUI () {
@@ -114,7 +125,7 @@ namespace Spine.Unity.Editor {
 				return;
 			}
 
-			if (needsReset) {
+			if (needsReset && Event.current.type == EventType.Layout) {
 				targetBoneFollower.Initialize();
 				targetBoneFollower.LateUpdate();
 				needsReset = false;
@@ -143,11 +154,8 @@ namespace Spine.Unity.Editor {
 			if (targetBoneFollower.valid) {
 				EditorGUI.BeginChangeCheck();
 				EditorGUILayout.PropertyField(boneName);
-				if (EditorGUI.EndChangeCheck()) {
-					serializedObject.ApplyModifiedProperties();
-					needsReset = true;
-					serializedObject.Update();
-				}
+				needsReset |= EditorGUI.EndChangeCheck();
+
 				EditorGUILayout.PropertyField(followBoneRotation);
 				EditorGUILayout.PropertyField(followZPosition);
 				EditorGUILayout.PropertyField(followLocalScale);
@@ -167,10 +175,12 @@ namespace Spine.Unity.Editor {
 				}
 			}
 
-			var current = UnityEngine.Event.current;
+			var current = Event.current;
 			bool wasUndo = (current.type == EventType.ValidateCommand && current.commandName == "UndoRedoPerformed");
-			if (serializedObject.ApplyModifiedProperties() || wasUndo)
+			if (wasUndo)
 				targetBoneFollower.Initialize();
+
+			serializedObject.ApplyModifiedProperties();
 		}
 	}
 
