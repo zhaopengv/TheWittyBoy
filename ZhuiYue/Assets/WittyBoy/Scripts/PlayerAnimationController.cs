@@ -13,13 +13,19 @@ public class PlayerAnimationController : MonoBehaviour {
 	const string climbName = "climb";
 	const string idleName = "idle";
 
-	// Use this for initialization
+
+    // Use this for initialization
+
+    string state = idleName;
+
+  //  Spine.TrackEntry 
+    
 	void Start () {
 		mSkeletonAnimation = gameObject.GetComponent<SkeletonAnimation> ();
 		//mSkeletonAnimation.AnimationName = walkName;
 		mAnimationState = mSkeletonAnimation.state;
 		mAnimationState.SetAnimation (0, blinkName, true);
-		mAnimationState.SetAnimation (1, walkName, true);
+		
 
 	}
 
@@ -27,4 +33,71 @@ public class PlayerAnimationController : MonoBehaviour {
 	void Update () {
 
 	}
+
+    public void walk()
+    {
+        print("PlayerAnimationController walk");
+
+
+        //mAnimationState.SetAnimation(1, walkName, true);
+        // mSkeletonAnimation.AnimationName = walkName;
+        // if(mAnimationState.GetCurrent(1).)
+
+
+
+        //if (state != walkName)
+        //{
+        Spine.TrackEntry now = mAnimationState.GetCurrent(1);
+        if (now != null &&now.animation != null && now.animation.name == walkName && !now.IsComplete)
+        {
+            //此时请动画正在执行。
+
+        }
+        else
+        {
+            Spine.TrackEntry entry = mAnimationState.SetAnimation(1, walkName, false);
+        }
+
+            
+
+      //  print("entry is "+entry);
+        //}
+        
+
+       // entry.
+
+        state = walkName;
+        
+    }
+    public void flip(bool b)
+    {
+       mSkeletonAnimation.skeleton.FlipX = b;
+
+    }
+
+
+    public void jump()
+    {
+        print("PlayerAnimationController jump");
+        mAnimationState.SetAnimation(1, jumpName, false);
+        //mSkeletonAnimation.AnimationName = jumpName;
+        state = jumpName;
+    }
+
+    public void idle()
+    {
+        //print("PlayerAnimationController idle");
+        mAnimationState.SetAnimation(1, idleName, true);
+       // mSkeletonAnimation.AnimationName = idleName;
+       // state = idleName;
+    }
+
+    public void climb()
+    {
+
+        print("PlayerAnimationController climb");
+        //  mAnimationState.SetAnimation(1, climbName, true);
+       // mSkeletonAnimation.AnimationName = climbName;
+        state = climbName;
+    }
 }

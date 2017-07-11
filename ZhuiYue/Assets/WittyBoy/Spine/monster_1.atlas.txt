@@ -1,0 +1,62 @@
+
+monster_1.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+monster_jump_body
+  rotate: false
+  xy: 2, 53
+  size: 300, 195
+  orig: 300, 195
+  offset: 0, 0
+  index: -1
+monster_jump_left_eye
+  rotate: false
+  xy: 606, 199
+  size: 47, 49
+  orig: 47, 49
+  offset: 0, 0
+  index: -1
+monster_jump_left_eye_normal
+  rotate: false
+  xy: 2, 2
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: -1
+monster_jump_right_eye_normal
+  rotate: false
+  xy: 2, 2
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: -1
+monster_jump_left_feet
+  rotate: false
+  xy: 53, 27
+  size: 50, 24
+  orig: 50, 24
+  offset: 0, 0
+  index: -1
+monster_jump_mask
+  rotate: false
+  xy: 304, 192
+  size: 300, 56
+  orig: 300, 56
+  offset: 0, 0
+  index: -1
+monster_jump_right_eye
+  rotate: false
+  xy: 304, 141
+  size: 48, 49
+  orig: 48, 49
+  offset: 0, 0
+  index: -1
+monster_jump_right_feet
+  rotate: false
+  xy: 304, 115
+  size: 46, 24
+  orig: 46, 24
+  offset: 0, 0
+  index: -1
