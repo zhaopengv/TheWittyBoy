@@ -1244,6 +1244,8 @@
     <Compile Include="Assets\Unitycoding\Shared\Scripts\Runtime\Utility\UnityUtility.cs" />
     <Compile Include="Assets\Unitycoding\Shared\Scripts\Runtime\Utility\WindowsRuntimeExtension.cs" />
     <Compile Include="Assets\WittyBoy\Scripts\AIState.cs" />
+    <Compile Include="Assets\WittyBoy\Scripts\Actions\BaseAction.cs" />
+    <Compile Include="Assets\WittyBoy\Scripts\Actions\PatrolAction.cs" />
     <Compile Include="Assets\WittyBoy\Scripts\MonsterJumpAI.cs" />
     <Compile Include="Assets\WittyBoy\Scripts\PlayerAnimationController.cs" />
     <Compile Include="Assets\WittyBoy\Scripts\PlayerController.cs" />

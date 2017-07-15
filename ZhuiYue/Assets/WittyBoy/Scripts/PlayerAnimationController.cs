@@ -5,7 +5,7 @@ using Spine.Unity;
 
 public class PlayerAnimationController : MonoBehaviour {
 
-	SkeletonAnimation mSkeletonAnimation;
+	public SkeletonAnimation mSkeletonAnimation;
 	Spine.AnimationState mAnimationState;
 	const string blinkName = "blink";
 	const string walkName = "walk";
@@ -21,7 +21,7 @@ public class PlayerAnimationController : MonoBehaviour {
   //  Spine.TrackEntry 
     
 	void Start () {
-		mSkeletonAnimation = gameObject.GetComponent<SkeletonAnimation> ();
+		//mSkeletonAnimation = gameObject.GetComponent<SkeletonAnimation> ();
 		//mSkeletonAnimation.AnimationName = walkName;
 		mAnimationState = mSkeletonAnimation.state;
 		mAnimationState.SetAnimation (0, blinkName, true);
