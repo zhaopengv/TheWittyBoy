@@ -4,7 +4,7 @@ using UnityEngine;
 using ICode;
 using System;
 
-public class MonsterJumpAI : MonoBehaviour {
+public class MonsterJumpAI : MonoBehaviour ,ExternalFunction {
 
 
     ICodeBehaviour cb;
@@ -38,6 +38,23 @@ public class MonsterJumpAI : MonoBehaviour {
 		
 	}
 
+	private void OnCollisionEnter2D(Collision other){
+		Debug.Log ("OnCollisionEnter2D other is "+other);
+
+	}
+
+	public void apply (PlayerController playerController,Collision2D other){
+		Debug.Log ("ReboundFunction !!!");
+		//playerController.playerRigidbody.velocity.
+	 
+
+		Debug.Log ("relative velocity is "+other.relativeVelocity);
+
+		//Death
+		Destroy(gameObject);
+		//
+		//playerController.playerRigidbody.AddForce(other.relativeVelocity.y * Vector2.up * 10);
+	}
     
 
     

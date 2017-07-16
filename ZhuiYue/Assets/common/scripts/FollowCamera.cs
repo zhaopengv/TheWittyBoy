@@ -9,6 +9,9 @@ public class FollowCamera : MonoBehaviour {
 	public float smooth = 1;
 	public Vector3 offset;
 
+	public float minX;
+	public float maxX;
+
 	Camera mCamera;
 
 	void Start () {
@@ -29,10 +32,16 @@ public class FollowCamera : MonoBehaviour {
 		targetPosition.y = transform.position.y;
         targetPosition.z = transform.position.z;
 
+		targetPosition.x = Math.Max (targetPosition.x, minX);
+		targetPosition.x = Math.Min (targetPosition.x, maxX);
 
 
 
 		transform.position = Vector3.Lerp (transform.position,targetPosition, Time.deltaTime * smooth);
+
+		if (transform.position.x < minX) {
+			//Math.Max
+		}
 
         //print("");
 	}

@@ -19,7 +19,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_5_6_1;UNITY_5_6;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;INCLUDE_DYNAMIC_GI;INCLUDE_GI;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;ENABLE_VIDEO;UNITY_WEBGL;UNITY_WEBGL_API;UNITY_DISABLE_WEB_VERIFICATION;UNITY_GFX_USE_PLATFORM_VSYNC;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_VR;ENABLE_IL2CPP;NET_2_0_SUBSET;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_5_6_1;UNITY_5_6;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;INCLUDE_DYNAMIC_GI;INCLUDE_GI;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;ENABLE_VIDEO;UNITY_WEBGL;UNITY_WEBGL_API;UNITY_DISABLE_WEB_VERIFICATION;UNITY_GFX_USE_PLATFORM_VSYNC;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_VR;ENABLE_IL2CPP;NET_2_0_SUBSET;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ICODE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Plugins\Ultimate Joystick\Scripts\UltimateJoystick.cs" />
      <Compile Include="Assets\Standard Assets\2D\Scripts\Camera2DFollow.cs" />
      <Compile Include="Assets\Standard Assets\2D\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Standard Assets\2D\Scripts\Platformer2DUserControl.cs" />
@@ -94,11 +95,13 @@
      <None Include="Assets\spine-unity\Modules\Shaders\Sprite\SpriteVertexLighting.cginc" />
      <None Include="Assets\spine-unity\Modules\Shaders\Sprite\SpriteShadows.cginc" />
      <None Include="Assets\TiledTilemaps\Examples\Tilemaps\platformer.xml" />
+     <None Include="Assets\Ultimate Joystick Examples\Third Person Example\README_ThirdPerson.txt" />
      <None Include="Assets\spine-unity\Modules\Shaders\Sprite\CGIncludes\SpriteShadows.cginc" />
      <None Include="Assets\spine-unity\Modules\Shaders\Sprite\SpritePixelLighting.cginc" />
      <None Include="Assets\spine-unity\Modules\Shaders\Sprite\SpriteLighting.cginc" />
      <None Include="Assets\ZhuiYue\Sprites\hero.atlas.txt" />
      <None Include="Assets\Examples\Spine\Gauge\Gauge.atlas.txt" />
+     <None Include="Assets\Plugins\Ultimate Joystick\README.txt" />
      <None Include="Assets\Examples\Spine\FootSoldier\FS_White.atlas.txt" />
      <None Include="Assets\spine-unity\Modules\Shaders\Sprite\ShaderShared.cginc" />
      <None Include="Assets\spine-unity\Modules\CustomMaterials\SkeletonRendererCustomMaterials.txt" />
@@ -112,6 +115,7 @@
      <None Include="Assets\spine-unity\Modules\Shaders\Sprite\CGIncludes\SpriteLighting.cginc" />
      <None Include="Assets\spine-unity\Modules\SlotBlendModes\Spine-Skeleton-PMA-Screen.shader" />
      <None Include="Assets\Examples\Spine\Spineboy\spineboy.atlas.txt" />
+     <None Include="Assets\WittyBoy\Spine\monster_1.atlas.txt" />
      <None Include="Assets\spine-unity\Modules\Shaders\Sprite\SpriteUnlit.cginc" />
      <None Include="Assets\spine-unity\Modules\Shaders\Sprite\CGIncludes\SpriteUnlit.cginc" />
      <None Include="Assets\Examples\Spine\FootSoldier\license.txt" />
@@ -120,6 +124,7 @@
      <None Include="Assets\TiledTilemaps\Examples\Tilemaps\platformerMultipleTilesets.xml" />
      <None Include="Assets\Runner\Spine\Runner.atlas.txt" />
      <None Include="Assets\Examples\Spine\Raggedy Spineboy\Raggedy Spineboy.atlas.txt" />
+     <None Include="Assets\Unitycoding\ICode\Scripts\Integrations\Photon Unity Networking\Changelog.txt" />
      <None Include="Assets\spine-unity\Modules\Shaders\SkeletonTint.shader" />
      <None Include="Assets\TiledTilemaps\Examples\Tilemaps\big.xml" />
      <None Include="Assets\CreativeSpore\SuperTilemapEditor\Extra\Tileset - Samples\Tiled - Tmx Import\license.txt" />
@@ -132,14 +137,18 @@
      <None Include="Assets\TiledTilemaps\Examples\Tilemaps\desert.xml" />
      <None Include="Assets\WittyBoy\Spine\wittyboy.atlas.txt" />
      <None Include="Assets\spine-unity\Modules\Shaders\Sprite\CGIncludes\SpriteVertexLighting.cginc" />
+     <None Include="Assets\Ultimate Joystick Examples\Spaceship Example\README_Spaceship.txt" />
      <None Include="Assets\Examples\Spine\Dragon\dragon.atlas.txt" />
      <None Include="Assets\spine-unity\Modules\Shaders\Sprite\CameraDepthNormalsTexture.shader" />
      <None Include="Assets\spine-unity\Modules\Shaders\Sprite\CGIncludes\ShaderShared.cginc" />
      <None Include="Assets\spine-unity\Modules\SkeletonGraphic\Shaders\SkeletonGraphic.shader" />
      <None Include="Assets\spine-unity\Shaders\Skeleton.shader" />
+     <None Include="Assets\Unitycoding\ICode\Scripts\Integrations\MySQL\PHP\crossdomain.xml" />
      <None Include="Assets\spine-unity\Modules\Shaders\Sprite\CameraNormalsTexture.shader" />
      <None Include="Assets\Examples\Spine\Spineunitygirl\Doi.atlas.txt" />
+     <None Include="Assets\Unitycoding\ICode\Version Changes.txt" />
      <None Include="Assets\spine-unity\Modules\Shaders\Sprite\CameraDepthTexture.shader" />
+     <None Include="Assets\Unitycoding\ICode\Scripts\Editor\Resources\GridLine.shader" />
      <None Include="Assets\spine-unity\Modules\SlotBlendModes\Spine-Skeleton-PMA-Multiply.shader" />
      <None Include="Assets\spine-unity\Modules\Shaders\Sprite\CGIncludes\ShaderMaths.cginc" />
      <None Include="Assets\spine-unity\Modules\SkeletonRenderSeparator\SkeletonRenderSeparator.txt" />

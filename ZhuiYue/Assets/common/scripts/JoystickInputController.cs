@@ -35,7 +35,7 @@ public class JoystickInputController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-#if UNITY_EDITOR_WIN
+#if UNITY_EDITOR
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
 

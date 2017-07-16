@@ -36,13 +36,13 @@ public class PlayerAnimationController : MonoBehaviour {
 
     public void walk()
     {
-        print("PlayerAnimationController walk");
+//        print("PlayerAnimationController walk");
 
 
         //mAnimationState.SetAnimation(1, walkName, true);
         // mSkeletonAnimation.AnimationName = walkName;
         // if(mAnimationState.GetCurrent(1).)
-
+		mAnimationState.TimeScale = 2f;
 
 
         //if (state != walkName)
@@ -78,7 +78,8 @@ public class PlayerAnimationController : MonoBehaviour {
 
     public void jump()
     {
-        print("PlayerAnimationController jump");
+		mAnimationState.TimeScale = 1f;
+//        print("PlayerAnimationController jump");
         mAnimationState.SetAnimation(1, jumpName, false);
         //mSkeletonAnimation.AnimationName = jumpName;
         state = jumpName;
@@ -87,6 +88,7 @@ public class PlayerAnimationController : MonoBehaviour {
     public void idle()
     {
         //print("PlayerAnimationController idle");
+		mAnimationState.TimeScale = 1f;
         mAnimationState.SetAnimation(1, idleName, true);
        // mSkeletonAnimation.AnimationName = idleName;
        // state = idleName;
@@ -96,8 +98,24 @@ public class PlayerAnimationController : MonoBehaviour {
     {
 
         print("PlayerAnimationController climb");
-        //  mAnimationState.SetAnimation(1, climbName, true);
-       // mSkeletonAnimation.AnimationName = climbName;
-        state = climbName;
+		Spine.TrackEntry now = mAnimationState.GetCurrent(1);
+		if (now != null && now.animation != null && now.animation.name == climbName && !now.IsComplete) {
+			//此时请动画正在执行。
+
+		} else {
+			mAnimationState.SetAnimation (1, climbName, false);
+			mAnimationState.TimeScale = 5f;
+			//mSkeletonAnimation.AnimationName = climbName;
+			state = climbName;
+		}
     }
+
+	public void stopClimb(){
+
+		Spine.TrackEntry now = mAnimationState.GetCurrent(1);
+		if (now != null && now.animation != null && now.animation.name == climbName && !now.IsComplete) {
+			//此时请动画正在执行。
+			//now.timeScale = 0;
+		} 
+	}
 }
