@@ -64,6 +64,8 @@ public class PlayerController : MonoBehaviour {
 
         //if(playerRigidbody)
 
+		print ("isGroud is "+isGroud);
+
         playerVolocity.x = x * moveSmooth;
         if(x != 0)
             mAnimationController.flip(x < 0);
@@ -168,18 +170,26 @@ public class PlayerController : MonoBehaviour {
 
 	IEnumerator applyExternalFuntion(ExternalFunction ef,Collision2D collision){
 
-		onMonster = true;
-		print("applyExternalFuntion !!!! ef is "+ef);
-		//ef.apply()
-		ef.apply(this,collision);
+
+		if (collision.contacts [0].normal.y == 1) {
+			//只处理从上方来的事件
+
+			onMonster = true;
+			print ("applyExternalFuntion !!!! ef is " + ef);
+			//ef.apply()
+			ef.apply (this, collision);
 
 
-		addtionVelocity = (25 * Vector2.up) ;
+			addtionVelocity = (25 * Vector2.up);
 
-		yield return new WaitForSeconds (.1f);
+			yield return new WaitForSeconds (.1f);
 
-		onMonster = false;
-		addtionVelocity = Vector2.zero;
+			onMonster = false;
+			addtionVelocity = Vector2.zero;
+		} else {
+			//角色死亡
+
+		}
 
 	}
 

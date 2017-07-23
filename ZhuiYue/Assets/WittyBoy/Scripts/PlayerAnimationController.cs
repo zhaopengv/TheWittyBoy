@@ -109,6 +109,7 @@ public class PlayerAnimationController : MonoBehaviour {
 			state = climbName;
 		}
     }
+		
 
 	public void stopClimb(){
 
